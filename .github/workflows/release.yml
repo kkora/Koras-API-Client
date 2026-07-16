@@ -21,7 +21,7 @@ jobs:
     # The Trusted Publishing policy on NuGet.org must reference this repo, workflow, and environment.
     environment: nuget-release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
