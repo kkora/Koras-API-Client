@@ -21,12 +21,12 @@ jobs:
     # The Trusted Publishing policy on NuGet.org must reference this repo, workflow, and environment.
     environment: nuget-release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Setup .NET SDKs
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
             8.0.x
@@ -71,7 +71,7 @@ jobs:
           --skip-duplicate
 
       - name: Create GitHub release with packages
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           generate_release_notes: true
           files: |
