@@ -1,0 +1,49 @@
+name: package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CI: "true"
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET SDKs
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            9.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      # Package validation (EnablePackageValidation) runs during pack.
+      - name: Pack (prerelease build number on main)
+        run: >
+          dotnet pack --configuration Release --no-build
+          --output artifacts/packages
+          -p:VersionSuffix=preview.1.${{ github.run_number }}
+
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-packages
+          path: |
+            artifacts/packages/*.nupkg
+            artifacts/packages/*.snupkg

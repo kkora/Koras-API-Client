@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Koras.ApiClient.Testing</PackageId>
+    <RootNamespace>Koras.ApiClient.Testing</RootNamespace>
+    <Description>Test doubles for Koras.ApiClient: MockApiHandler scripts HTTP responses (JSON, ProblemDetails, sequences, exceptions) and records every request, while KorasApiClientTestFactory builds a real client over the mock transport — unit-test your API integrations without a network. Test-framework agnostic.</Description>
+    <PackageTags>http;api;client;testing;mock;test-doubles;unit-testing</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Koras.ApiClient\Koras.ApiClient.csproj" />
+  </ItemGroup>
+
+</Project>

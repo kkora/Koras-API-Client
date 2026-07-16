@@ -1,0 +1,34 @@
+<Project>
+
+  <PropertyGroup Label="Language and analysis">
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Build determinism">
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Version">
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>preview.1</VersionSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package metadata (shared)">
+    <Authors>Kanchan Kora</Authors>
+    <Company>Koras Technologies</Company>
+    <Copyright>Copyright (c) 2026 Koras Technologies</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/KKORA/koras-api-client</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KKORA/koras-api-client</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+</Project>

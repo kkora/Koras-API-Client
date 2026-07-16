@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Koras.ApiClient.Samples.MinimalApi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Koras.ApiClient\Koras.ApiClient.csproj" />
+  </ItemGroup>
+
+</Project>

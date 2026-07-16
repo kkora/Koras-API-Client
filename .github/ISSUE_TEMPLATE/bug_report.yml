@@ -1,0 +1,38 @@
+name: Bug report
+description: Something in Koras.ApiClient behaves incorrectly
+labels: [bug, triage]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Package and version
+      placeholder: "Koras.ApiClient 0.1.0-preview.1"
+    validations:
+      required: true
+  - type: input
+    id: tfm
+    attributes:
+      label: Target framework and OS
+      placeholder: "net8.0 on Windows Server 2022"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Smallest code sample that shows the problem (MockApiHandler-based repros are ideal).
+      render: csharp
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior (include ApiError category/code and logs if relevant — redact secrets!)
+    validations:
+      required: true

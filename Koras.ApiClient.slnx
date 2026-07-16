@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/Koras.ApiClient.Benchmarks/Koras.ApiClient.Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/Console.Sample/Console.Sample.csproj" />
+    <Project Path="samples/MinimalApi.Sample/MinimalApi.Sample.csproj" />
+    <Project Path="samples/WorkerService.Sample/WorkerService.Sample.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Koras.ApiClient.Abstractions/Koras.ApiClient.Abstractions.csproj" />
+    <Project Path="src/Koras.ApiClient.Testing/Koras.ApiClient.Testing.csproj" />
+    <Project Path="src/Koras.ApiClient/Koras.ApiClient.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Koras.ApiClient.IntegrationTests/Koras.ApiClient.IntegrationTests.csproj" />
+    <Project Path="tests/Koras.ApiClient.UnitTests/Koras.ApiClient.UnitTests.csproj" />
+  </Folder>
+</Solution>

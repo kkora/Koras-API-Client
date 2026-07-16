@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Koras Technologies",
+      "copyrightText": "Copyright (c) Koras Technologies. Licensed under the MIT license.",
+      "xmlHeader": false,
+      "documentInternalElements": false
+    },
+    "orderingRules": {
+      "systemUsingDirectivesFirst": true,
+      "usingDirectivesPlacement": "outsideNamespace"
+    }
+  },
+  "_comment": "StyleCop.Analyzers is not currently wired into the build; style is enforced via .editorconfig + EnforceCodeStyleInBuild + built-in analyzers. This settings file is kept so the analyzer can be enabled without churn (see CLAUDE.md)."
+}

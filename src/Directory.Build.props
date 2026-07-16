@@ -1,0 +1,24 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)..'))" />
+
+  <PropertyGroup Label="Shipping package settings">
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Release notes: https://github.com/KKORA/koras-api-client/blob/main/CHANGELOG.md</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="$(MSBuildThisFileDirectory)..\assets\icon.png" Pack="true" PackagePath="icon.png" Visible="false" />
+  </ItemGroup>
+</Project>

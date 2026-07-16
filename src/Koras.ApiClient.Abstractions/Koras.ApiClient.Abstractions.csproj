@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Koras.ApiClient.Abstractions</PackageId>
+    <RootNamespace>Koras.ApiClient</RootNamespace>
+    <Description>Contracts and models for Koras.ApiClient: IApiClient, ApiResponse, categorized ApiError with RFC 9457 ProblemDetails, token provider and pagination primitives. Zero third-party dependencies — reference this from SDKs and domain assemblies that consume an API client without pulling the full framework.</Description>
+    <PackageTags>http;httpclient;api;client;rest;abstractions;errors;problemdetails</PackageTags>
+  </PropertyGroup>
+
+</Project>
