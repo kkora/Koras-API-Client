@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup Label="Runtime dependencies">
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="9.0.4" />
-    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.3.0" />
-    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="9.0.4" />
-    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.8.0" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.10" />
   </ItemGroup>
 
   <ItemGroup Label="Samples">
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.10" />
   </ItemGroup>
 
   <ItemGroup Label="Tests">
@@ -20,7 +20,7 @@
     <PackageVersion Include="xunit" Version="2.9.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.10" />
   </ItemGroup>
 
   <ItemGroup Label="Benchmarks">
