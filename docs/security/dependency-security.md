@@ -31,6 +31,6 @@ sbom-tool generate -b artifacts/packages -bc . -pn Koras.ApiClient -pv <version>
 
 Attach the SBOM to the GitHub release alongside the packages.
 
-## Package signing
+## Publishing trust & package signing
 
-Packages publish to NuGet.org via a scoped API key held as an environment-protected repository secret (`NUGET_API_KEY`); NuGet.org repository-signs all packages. Author signing (NuGet `sign`) is planned for 1.0 once an org code-signing certificate is provisioned — tracked in the release checklist.
+Packages publish to NuGet.org via **Trusted Publishing (OIDC)**: the release workflow exchanges a GitHub-issued identity token for a short-lived API key scoped to that single run — no long-lived publish credential exists anywhere. The publish job is additionally gated by the `nuget-release` GitHub environment (optional required reviewers). NuGet.org repository-signs all packages. Author signing (NuGet `sign`) is planned for 1.0 once an org code-signing certificate is provisioned — tracked in the release checklist.

@@ -5,7 +5,7 @@
 1. **Prepare** — CHANGELOG: move `Unreleased` into a version section with date; bump `VersionPrefix`/`VersionSuffix` in `Directory.Build.props`; run the [release checklist](release-checklist.md).
 2. **PR** the release prep to `main`; CI must be fully green (build, tests ×2 TFM ×2 OS, pack validation, CodeQL, audit).
 3. **Tag** — `git tag v0.1.0-preview.1 && git push origin v0.1.0-preview.1`.
-4. **Automation** (`release.yml`, environment `nuget-release` with required reviewer): restore → build (`-p:Version` from tag) → test → pack (validated) → `dotnet nuget push` to NuGet.org (`--skip-duplicate`) → GitHub release with generated notes + `.nupkg`/`.snupkg` attached.
+4. **Automation** (`release.yml`, environment `nuget-release` with required reviewer): restore → build (`-p:Version` from tag) → test → pack (validated) → OIDC login via NuGet **Trusted Publishing** (`NuGet/login` mints a short-lived key; setup in [nuget-publishing.md](nuget-publishing.md)) → `dotnet nuget push` (`--skip-duplicate`) → GitHub release with generated notes + `.nupkg`/`.snupkg` attached.
 5. **Verify** — packages visible on NuGet.org, consumption smoke test (see [compatibility-testing](../testing/compatibility-testing.md)), README renders on the gallery page.
 6. **Announce** — GitHub Discussions post; roadmap updated.
 

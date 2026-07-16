@@ -57,7 +57,7 @@ Build green on all TFMs · tests added and passing · public API checklist appli
 
 ## 14. Release workflow
 
-Tag `v<version>` → `release.yml` builds, tests, packs, publishes to NuGet.org via repository secret `NUGET_API_KEY` (environment-protected). See `docs/release/release-process.md`.
+Tag `v<version>` → `release.yml` builds, tests, packs, publishes to NuGet.org via **Trusted Publishing** (OIDC exchanged for a short-lived key by `NuGet/login`; no long-lived secret), gated by the `nuget-release` environment. See `docs/release/release-process.md`.
 
 ## 15. Definition of done
 
