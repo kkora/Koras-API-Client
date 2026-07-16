@@ -6,7 +6,7 @@ Releases publish via **NuGet.org Trusted Publishing**: the `release.yml` workflo
 
 ### One-time setup on NuGet.org
 
-1. Sign in to nuget.org as the owning profile (`kkora`).
+1. Sign in to nuget.org as the owning profile (`kora.kanchan`).
 2. Account → **Trusted Publishing** → add a policy:
    - Repository owner: `kkora`
    - Repository: `Koras-API-Client`
@@ -25,7 +25,7 @@ Releases publish via **NuGet.org Trusted Publishing**: the `release.yml` workflo
 - uses: NuGet/login@v1
   id: nuget-login
   with:
-    user: kkora          # NuGet.org profile owning the policy
+    user: kora.kanchan   # NuGet.org profile owning the policy
 - run: dotnet nuget push "artifacts/packages/*.nupkg"
        --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}"
        --source https://api.nuget.org/v3/index.json --skip-duplicate
